@@ -1,0 +1,90 @@
+body{
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: #51b7b0;
+    color: #000000;
+}
+
+.grid-container{
+    display: grid; 
+    gap: 20px;
+    grid-template-areas: 
+    'header header'   
+    'topleft topright'
+    'botleft botright';
+}
+
+.header{    
+    grid-area: header;
+}
+
+.header, h2, h3, .grid-item1, .grid-item2, .grid-item3, .grid-item4{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    font-family: "Great Vibes", cursive;
+}
+
+.grid-item1{  
+    grid-area: topleft;
+    font-family: 'Brush Script MT';
+    font-size: 2rem;  
+}
+
+.grid-item2{
+    grid-area: topright;
+    font-family: 'Brush Script MT';
+    font-size: 2rem;  
+}
+
+.grid-item3{
+    grid-area: botleft;    
+}
+
+.grid-item4{
+    grid-area: botright;
+} 
+
+.btn{
+    font-size: 1rem;;
+    display: block;
+    margin: 20px auto;      
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.dice{ 
+    display: grid;
+    grid-template-columns: auto auto auto;  
+    height: 200px;
+    width: 200px;
+    background-color: #80142B;
+    
+}
+
+.player1_1, .player1_2, .player1_3,
+.player1_4, .player1_5, .player1_6,
+.player1_7, .player1_8, .player1_9,
+.player2_1, .player2_2, .player2_3,
+.player2_4, .player2_5, .player2_6,
+.player2_7, .player2_8, .player2_9{   
+    border-radius: 50%;    
+    margin: 10px;
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 900;    
+    font-style: italic;
+  }
+
+  .eater-regular {
+    font-family: "Eater", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
