@@ -1,8 +1,7 @@
-body{
-    margin-left: 300px;
-    margin-right: 300px;
+body{   
     background-color: #51b7b0;
     color: #000000;
+    height: 100vh;
 }
 
 .grid-container{
@@ -48,8 +47,7 @@ h2{
 } 
 
 .btn{
-    font-size: 1rem;;
-    display: block;
+    font-size: 1rem;    
     margin: 20px auto;      
     cursor: pointer;
     width: 150px;
@@ -62,8 +60,7 @@ h2{
     grid-template-columns: auto auto auto;  
     height: 200px;
     width: 200px;
-    background-color: #80142B;
-    
+    background-color: #80142B;    
 }
 
 .player1_1, .player1_2, .player1_3,
@@ -82,9 +79,18 @@ h2{
     font-style: italic;
   }
 
-  .eater-regular {
+.eater-regular {
     font-family: "Eater", serif;
     font-weight: 900;
     font-style: normal;
-  }
+}
   
+.button-result{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    
+}
