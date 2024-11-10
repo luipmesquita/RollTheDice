@@ -28,50 +28,36 @@ var dotsColor = "white";
 
 
 button.addEventListener('click', function(){
-    const number1 = Math.floor(Math.random() * 6) + 1;
-    const number2 = Math.floor(Math.random() * 6) + 1;
 
-    setTimeout(() => {
+    winner.textContent = "Rolling..." + "🎲"; 
+
+    for(let i = 0; i<6; i++){     
+        setTimeout(() => {                             
+            const randomNumber1 = Math.floor(Math.random() * 6) + 1;
+            const randomNumber2 = Math.floor(Math.random() * 6) + 1;          
+
+            resetBackgroundColor();
+            switchCasePlayer1(randomNumber1);
+            switchCasePlayer2(randomNumber2);                   
+        }, i*300)                               
+    };         
+
+    setTimeout(() => {  
+        const number1 = Math.floor(Math.random() * 6) + 1;
+        const number2 = Math.floor(Math.random() * 6) + 1;
+        
+        resetBackgroundColor();
+        switchCasePlayer1(number1);    
+        switchCasePlayer2(number2);   
+
         if(number1 > number2) {
-            winner.textContent = "Player 1 won!";
+            winner.textContent = "Player 1 won! " + "🚩";
         } else if(number1 < number2) {
-            winner.textContent = "Player 2 won!";
+            winner.textContent = "Player 2 won! " + "🚩";
         } else {
-            winner.textContent = "It's a tie!";
+            winner.textContent = "It's a tie!" + "🤝";
         }
-    }, 500); // 500ms delay   
-
-    resetBackgroundColor();
-
-    switch(number1){
-        case 1: onePlayer1()
-                break
-        case 2: twoPlayer1()
-                break
-        case 3: threePlayer1()
-                break
-        case 4: fourPlayer1()
-                break
-        case 5: fivePlayer1()
-                break
-        case 6: sixPlayer1()
-                break
-    }
-    
-    switch(number2){
-        case 1: onePlayer2()
-                break
-        case 2: twoPlayer2()
-                break
-        case 3: threePlayer2()
-                break
-        case 4: fourPlayer2()
-                break
-        case 5: fivePlayer2()
-                break
-        case 6: sixPlayer2()
-                break
-    }    
+    }, 6*300)                     
 })
 
 function resetBackgroundColor(){
@@ -171,4 +157,39 @@ function sixPlayer2(){
     player2_6.style.backgroundColor = dotsColor;
     player2_7.style.backgroundColor = dotsColor;
     player2_9.style.backgroundColor = dotsColor;
+}
+
+
+function switchCasePlayer1(number1){
+    switch(number1){
+        case 1: onePlayer1()
+                break
+        case 2: twoPlayer1()
+                break
+        case 3: threePlayer1()
+                break
+        case 4: fourPlayer1()
+                break
+        case 5: fivePlayer1()
+                break
+        case 6: sixPlayer1()
+                break
+    }
+}
+
+function switchCasePlayer2(number2){
+    switch(number2){
+        case 1: onePlayer2()
+                break
+        case 2: twoPlayer2()
+                break
+        case 3: threePlayer2()
+                break
+        case 4: fourPlayer2()
+                break
+        case 5: fivePlayer2()
+                break
+        case 6: sixPlayer2()
+                break
+    }
 }
