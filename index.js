@@ -31,13 +31,15 @@ button.addEventListener('click', function(){
     const number1 = Math.floor(Math.random() * 6) + 1;
     const number2 = Math.floor(Math.random() * 6) + 1;
 
-    if(number1 > number2){
-        winner.textContent = "Player 1 won!";
-    } else if(number1 < number2){
-        winner.textContent = "Player 2 won!";
-    } else  if(number1 == number2){
-        winner.textContent = "It's a tie!";
-    }    
+    setTimeout(() => {
+        if(number1 > number2) {
+            winner.textContent = "Player 1 won!";
+        } else if(number1 < number2) {
+            winner.textContent = "Player 2 won!";
+        } else {
+            winner.textContent = "It's a tie!";
+        }
+    }, 500); // 500ms delay   
 
     resetBackgroundColor();
 
